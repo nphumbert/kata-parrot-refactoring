@@ -13,7 +13,7 @@ public class Parrot {
     }
 
     public double getSpeed() {
-        switch(type) {
+        switch (type) {
             case EUROPEAN:
                 throw new IllegalStateException("Should be overridden");
             case AFRICAN:
@@ -25,7 +25,7 @@ public class Parrot {
     }
 
     protected double getBaseSpeed(double voltage) {
-        return Math.min(24.0, voltage*getBaseSpeed());
+        return Math.min(24.0, voltage * getBaseSpeed());
     }
 
     protected double getBaseSpeed() {
