@@ -18,7 +18,7 @@ public class Parrot {
     public double getSpeed() {
         switch(type) {
             case EUROPEAN:
-                return getBaseSpeed();
+                throw new IllegalStateException("Should be overridden");
             case AFRICAN:
                 return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
             case NORWEGIAN_BLUE:
@@ -27,15 +27,15 @@ public class Parrot {
         throw new RuntimeException("Should be unreachable");
     }
 
-    private double getBaseSpeed(double voltage) {
+    protected double getBaseSpeed(double voltage) {
         return Math.min(24.0, voltage*getBaseSpeed());
     }
 
-    private double getLoadFactor() {
+    protected double getLoadFactor() {
         return 9.0;
     }
 
-    private double getBaseSpeed() {
+    protected double getBaseSpeed() {
         return 12.0;
     }
 
