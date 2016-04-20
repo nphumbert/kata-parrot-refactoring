@@ -12,7 +12,7 @@ public class NorwegianParrotTest {
         Parrot parrot = new NorwegianParrot(0, true);
 
         // when
-        double speed = parrot.getSpeed();
+        double speed = parrot.computeSpeed();
 
         // then
         assertEquals(speed, 0.0);
@@ -24,7 +24,7 @@ public class NorwegianParrotTest {
         Parrot parrot = new NorwegianParrot(1.5, false);
 
         // when
-        double speed = parrot.getSpeed();
+        double speed = parrot.computeSpeed();
 
         // then
         assertEquals(speed, 18.0);
@@ -36,7 +36,7 @@ public class NorwegianParrotTest {
         Parrot parrot = new NorwegianParrot(4, false);
 
         // when
-        double speed = parrot.getSpeed();
+        double speed = parrot.computeSpeed();
 
         // then
         assertEquals(speed, 24.0);

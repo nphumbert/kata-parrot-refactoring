@@ -12,7 +12,7 @@ public class EuropeanParrotTest {
         Parrot parrot = new EuropeanParrot();
 
         // when
-        double speed = parrot.getSpeed();
+        double speed = parrot.computeSpeed();
 
         // then
         assertEquals(speed, 12.0);
